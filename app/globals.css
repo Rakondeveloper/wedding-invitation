@@ -1,0 +1,317 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-arabic: "Aref Ruqaa", "Times New Roman", serif;
+  --font-body: "Jost", -apple-system, "Segoe UI", sans-serif;
+
+  --c-cream: rgb(234, 224, 198);
+  --c-sand: rgb(224, 212, 184);
+  --c-emerald-regal: rgb(27, 59, 52);
+  --c-emerald-mid: rgb(27, 59, 52);
+  --c-bronze: #8c6d46;
+  --c-gold: #c9a24b;
+  --c-gold-bright: #f3dfa8;
+  --c-gold-dim: #8a713a;
+  --c-ivory: #F5EEDF;
+  --c-charcoal: #2c302e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--c-cream);
+  scroll-behavior: auto;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background: var(--c-cream);
+  color: var(--c-emerald-regal);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--c-gold);
+  color: var(--c-matte);
+}
+
+/* thin luxury scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--c-matte);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--c-gold-dim);
+  border-radius: 4px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-arabic {
+  font-family: var(--font-arabic);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-ml {
+  font-family: "Anek Malayalam", var(--font-body), sans-serif;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(120deg, #8a713a 0%, #f3dfa8 35%, #c9a24b 60%, #f3dfa8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: rgba(245, 238, 223, 0.06);
+  border: 1px solid rgba(201, 162, 75, 0.25);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.glass-strong {
+  background: rgba(10, 12, 10, 0.55);
+  border: 1px solid rgba(201, 162, 75, 0.35);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 162, 75, 0.6), transparent);
+}
+
+.hairline-v {
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(201, 162, 75, 0.6), transparent);
+}
+
+.gold-glow {
+  box-shadow: 0 0 40px rgba(201, 162, 75, 0.15);
+}
+
+.arch-top {
+  border-top-left-radius: 140px;
+  border-top-right-radius: 140px;
+}
+
+.arch-border {
+  border: 1px solid rgba(201, 162, 75, 0.35);
+}
+
+.split-line {
+  overflow: hidden;
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.full-width-section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-content {
+  width: 100%;
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--c-gold-bright);
+  outline-offset: 3px;
+}
+
+/* Hide Next.js Dev Overlay / Dev Indicator / Turbopack widgets in bottom-left */
+nextjs-portal,
+[data-nextjs-toast-wrapper],
+[data-nextjs-toast],
+[data-nextjs-dev-overlay],
+#next-route-announcer {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* --- ANIMATION KEYFRAMES & UTILITIES --- */
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverseSlow {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes floatGlow {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 0.45;
+  }
+}
+
+@keyframes shimmerGold {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulseRadar {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+@keyframes lineFlowDash {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes sparklePulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.2);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 45s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spinReverseSlow 60s linear infinite;
+}
+
+.animate-float-glow {
+  animation: floatGlow 8s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparklePulse 3s ease-in-out infinite;
+}
+
+.animate-radar {
+  animation: pulseRadar 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.gold-shimmer-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-shimmer-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(243, 223, 168, 0.35),
+    transparent
+  );
+  transition: left 0.75s ease;
+  pointer-events: none;
+}
+
+.gold-shimmer-border:hover::before {
+  left: 150%;
+}
+
+/* Background animated geometric lace overlay */
+.bg-islamic-pattern {
+  background-image: radial-gradient(rgba(201, 162, 75, 0.12) 1px, transparent 1px),
+    radial-gradient(rgba(201, 162, 75, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
