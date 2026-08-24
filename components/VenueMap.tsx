@@ -50,7 +50,7 @@ export default function VenueMap() {
     >
       <AnimatedBgPattern variant="sand" showStarMandala={true} showLatticeMesh={true} />
 
-      <div className="section-content relative z-10 text-center max-w-md">
+      <div className="section-content relative z-10 text-center max-w-lg">
         <span className="text-[10px] sm:text-xs font-medium uppercase tracking-wider sm:tracking-widest2 text-emerald-regal">
           {t("findWayLabel")}
         </span>
@@ -60,6 +60,9 @@ export default function VenueMap() {
         >
           {VENUE_DETAILS.name}
         </RevealText>
+        <p className="mt-2 font-body text-xs sm:text-sm font-normal text-charcoal/80">
+          {t("venueSharedSub")}
+        </p>
       </div>
 
       {/* Embedded Map Frame — 100% Edge-to-Edge Flush with Zero Gap */}

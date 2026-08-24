@@ -7,14 +7,15 @@ import ParticleField from "./ParticleField";
 import { EightPointStar } from "./IslamicMotifs";
 import AnimatedBgPattern from "./AnimatedBgPattern";
 import { useLanguage } from "../context/LanguageContext";
+import { COUPLES_DATA } from "../lib/couplesConfig";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero({ ready }: { ready: boolean }) {
   const { t } = useLanguage();
   const sectionRef = useRef<HTMLElement | null>(null);
-  const bismillahRef = useRef<HTMLHeadingElement | null>(null);
-  const translationRef = useRef<HTMLParagraphElement | null>(null);
+  const titleBlockRef = useRef<HTMLDivElement | null>(null);
+  const taglineRef = useRef<HTMLParagraphElement | null>(null);
   const inviteRef = useRef<HTMLParagraphElement | null>(null);
   const glowRef = useRef<HTMLDivElement | null>(null);
   const contentRef = useRef<HTMLDivElement | null>(null);
@@ -31,7 +32,7 @@ export default function Hero({ ready }: { ready: boolean }) {
 
     if (prefersReduced) {
       tl.set(
-        [bismillahRef.current, translationRef.current, inviteRef.current, scrollHintRef.current],
+        [titleBlockRef.current, taglineRef.current, inviteRef.current, scrollHintRef.current],
         { opacity: 1, y: 0, filter: "blur(0px)" }
       );
       return;
@@ -43,13 +44,13 @@ export default function Hero({ ready }: { ready: boolean }) {
       { opacity: 1, scale: 1, duration: 2.2, ease: "power2.out" }
     )
       .fromTo(
-        bismillahRef.current,
+        titleBlockRef.current,
         { opacity: 0, y: 30, filter: "blur(10px)" },
         { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.4 },
         "-=1.6"
       )
       .fromTo(
-        translationRef.current,
+        taglineRef.current,
         { opacity: 0, y: 18, filter: "blur(6px)" },
         { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.1 },
         "-=0.5"
@@ -142,7 +143,7 @@ export default function Hero({ ready }: { ready: boolean }) {
 
       {/* Decorative Gold Arch vector framing in warm bronze */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <svg viewBox="0 0 600 800" className="h-[60vh] sm:h-[80vh] max-h-[680px] w-auto text-bronze opacity-40">
+        <svg viewBox="0 0 600 800" className="h-[65vh] sm:h-[85vh] max-h-[720px] w-auto text-bronze opacity-40">
           <path
             d="M 100 800 L 100 300 A 200 200 0 0 1 500 300 L 500 800"
             fill="none"
@@ -168,33 +169,53 @@ export default function Hero({ ready }: { ready: boolean }) {
         ref={contentRef}
         className="section-content relative z-10 flex w-full max-w-3xl flex-col items-center text-center px-2 sm:px-6 mx-auto justify-center"
       >
-        <EightPointStar className="mb-4 sm:mb-6 h-6 w-6 sm:h-8 sm:w-8 text-bronze" />
+        <EightPointStar className="mb-3 sm:mb-4 h-6 w-6 sm:h-8 sm:w-8 text-bronze" />
 
-        <div className="mb-4 sm:mb-5 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+        <div className="mb-3 sm:mb-4 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
           <span className="hairline hidden w-12 bg-emerald-regal/60 sm:inline-block" />
-          <span className="text-[10px] sm:text-xs font-medium uppercase tracking-wider sm:tracking-widest2 text-emerald-regal">
+          <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider sm:tracking-widest2 text-emerald-regal">
             {t("heroSubtitle")}
           </span>
           <span className="hairline hidden w-12 bg-emerald-regal/60 sm:inline-block" />
         </div>
 
-        <h1
-          ref={bismillahRef}
-          className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-normal sm:tracking-wide text-emerald-regal font-semibold opacity-0 leading-tight"
+        {/* Dual Couples Visual Grouping */}
+        <div ref={titleBlockRef} className="flex flex-col items-center gap-2 sm:gap-3 opacity-0">
+          {COUPLES_DATA.map((couple, idx) => (
+            <div key={couple.id} className="flex flex-col items-center">
+              <h1 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl tracking-normal sm:tracking-wide text-emerald-regal font-semibold leading-tight">
+                <span>{couple.groom}</span>
+                <span className="mx-2 font-display italic font-medium text-bronze-dark">&amp;</span>
+                <span>{couple.bride}</span>
+              </h1>
+              {idx === 0 && (
+                <div className="my-1.5 flex items-center justify-center gap-3">
+                  <span className="h-px w-8 bg-bronze/40" />
+                  <span className="font-display italic text-base sm:text-xl font-medium text-bronze-dark">&amp;</span>
+                  <span className="h-px w-8 bg-bronze/40" />
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Supporting Line */}
+        <p
+          ref={taglineRef}
+          className="mt-3 sm:mt-5 font-display text-base sm:text-xl md:text-2xl italic font-medium leading-snug text-bronze-dark opacity-0"
         >
-          {t("heroTitle")}
-        </h1>
+          “{t("heroTagline")}”
+        </p>
 
         <p
-          ref={translationRef}
-          className="mt-4 sm:mt-6 max-w-xs sm:max-w-lg font-display text-lg sm:text-2xl md:text-3xl italic font-medium leading-snug sm:leading-relaxed text-charcoal opacity-0"
+          className="mt-2 sm:mt-3 max-w-xs sm:max-w-lg font-body text-xs sm:text-base font-normal leading-relaxed text-charcoal/90"
         >
           {t("heroInviteText")}
         </p>
 
         <p
           ref={inviteRef}
-          className="mt-4 sm:mt-6 text-[10px] sm:text-xs md:text-sm font-medium uppercase tracking-wider sm:tracking-widest2 text-emerald-regal opacity-0"
+          className="mt-4 sm:mt-6 text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider sm:tracking-widest2 text-emerald-regal opacity-0"
         >
           {t("heroDateVenue")}
         </p>

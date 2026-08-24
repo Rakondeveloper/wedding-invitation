@@ -8,6 +8,7 @@ import RevealText from "./RevealText";
 import AnimatedBgPattern from "./AnimatedBgPattern";
 import ParticleField from "./ParticleField";
 import { useLanguage } from "../context/LanguageContext";
+import { COUPLES_DATA } from "../lib/couplesConfig";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,16 +69,20 @@ export default function FinalBlessing() {
           {t("blessingHeading")}
         </RevealText>
 
-        <div className="mt-6 sm:mt-10 flex flex-col items-center gap-2 sm:gap-3">
-          <span className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-gradient-gold">
-            {t("heroTitle")}
-          </span>
-          <span className="text-[10px] sm:text-xs font-medium uppercase tracking-wider sm:tracking-widest2 text-gold-bright">
+        <div className="mt-6 sm:mt-10 flex flex-col items-center gap-1.5 sm:gap-2">
+          {COUPLES_DATA.map((c, i) => (
+            <div key={c.id} className="flex flex-col items-center">
+              <span className="font-display text-xl sm:text-2xl md:text-3xl font-semibold tracking-wide text-gradient-gold">
+                {c.groom} &amp; {c.bride}
+              </span>
+              {i === 0 && <span className="my-0.5 font-display text-sm sm:text-base italic font-medium text-gold-bright/70">&amp;</span>}
+            </div>
+          ))}
+          <span className="mt-3 text-[10px] sm:text-xs font-semibold uppercase tracking-wider sm:tracking-widest2 text-gold-bright">
             {t("blessingSub")}
           </span>
         </div>
       </div>
     </section>
-
   );
 }

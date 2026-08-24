@@ -4,6 +4,7 @@ export interface TranslationSchema {
   // Hero
   heroSubtitle: string;
   heroTitle: string;
+  heroTagline: string;
   heroInviteText: string;
   heroDateVenue: string;
   heroScroll: string;
@@ -15,6 +16,8 @@ export interface TranslationSchema {
   // Couple Reveal
   coupleSubtitle: string;
   coupleHeading: string;
+  groomLabel: string;
+  brideLabel: string;
   couple1Desc: string;
   couple2Desc: string;
   coupleQuote: string;
@@ -22,6 +25,7 @@ export interface TranslationSchema {
   // Wedding Info
   saveDateLabel: string;
   youAreInvited: string;
+  invitationSub: string;
   dateLabel: string;
   dateVal: string;
   dateSub: string;
@@ -75,6 +79,7 @@ export interface TranslationSchema {
 
   // Venue Map
   findWayLabel: string;
+  venueSharedSub: string;
   googleMapsBtn: string;
   appleMapsBtn: string;
 
@@ -118,8 +123,9 @@ export interface TranslationSchema {
 
 export const translations: Record<Language, TranslationSchema> = {
   en: {
-    heroSubtitle: "Two Couples • One Sacred Celebration",
-    heroTitle: "Bais & Nishad",
+    heroSubtitle: "A Celebration of Two Beautiful Unions",
+    heroTitle: "Two Unions • One Celebration",
+    heroTagline: "Two couples, one unforgettable celebration.",
     heroInviteText: "Cordially invite you to celebrate their Walima",
     heroDateVenue: "Saturday, 29 August 2026 • Vista Convention Centre",
     heroScroll: "Scroll To Begin",
@@ -128,15 +134,19 @@ export const translations: Record<Language, TranslationSchema> = {
     quranTranslation:
       "“And among His signs is that He created for you mates from among yourselves, that you may dwell in tranquility with them, and He has put love and mercy between your hearts.”",
 
-    coupleSubtitle: "Two Families Joined",
-    coupleHeading: "Grace & Divine Blessing",
+    coupleSubtitle: "Two Sacred Unions",
+    coupleHeading: "Meet the Two Couples",
+    groomLabel: "GROOM",
+    brideLabel: "BRIDE",
     couple1Desc:
       "Beginning their lifelong journey of love, faith, and togetherness.",
     couple2Desc: "Stepping into a sacred chapter filled with grace and joy.",
-    coupleQuote: "Two celebrations, one unforgettable evening",
+    coupleQuote: "Two journeys, two promises, one beautiful celebration",
 
     saveDateLabel: "Save The Date",
-    youAreInvited: "You Are Lovingly Invited",
+    youAreInvited: "You Are Lovingly Invited to Celebrate Two Unions",
+    invitationSub:
+      "Join us as we celebrate the marriages of Zyd Bais & Zydth Busthana, and Zyd Nishad & Zydth Jumaila Nasri.",
     dateLabel: "DATE",
     dateVal: "29 August",
     dateSub: "Saturday",
@@ -168,18 +178,19 @@ export const translations: Record<Language, TranslationSchema> = {
     scheduleDate: "Saturday, 29 August 2026",
     event1Time: "4:00 PM",
     event1Title: "Walima Ceremony",
-    event1Desc: "Welcome & Gathering of Honored Guests",
+    event1Desc:
+      "Celebrating two couples and the beginning of their beautiful journeys together.",
     event2Time: "6:30 PM",
     event2Title: "Dinner & Feast",
-    event2Desc: "A Delightful Celebration & Banquet",
+    event2Desc: "A joyful evening shared by both families and loved ones.",
     event3Time: "9:00 PM",
     event3Title: "Blessings & Farewell",
-    event3Desc: "Prayers & Warm Expressions of Gratitude",
+    event3Desc: "Sending our heartfelt blessings to both newlywed couples.",
 
     galleryLabel: "Cinematic Moments",
     galleryHeading: "A Tale of Two Promises",
     gallerySub:
-      "Unfolding the romance, elegance, and divine grace of our shared celebration.",
+      "Two journeys, two promises, one beautiful celebration surrounded by family, faith, and love.",
     portraitLabel: "Walima Portrait",
     portraitSub: "Where love finds its eternal home",
     sacredTitle: "Sacred Details",
@@ -188,6 +199,7 @@ export const translations: Record<Language, TranslationSchema> = {
     grandSub: "Saturday, 29 August 2026",
 
     findWayLabel: "Find Your Way",
+    venueSharedSub: "A shared celebration for two newlywed couples.",
     googleMapsBtn: "Google Maps",
     appleMapsBtn: "Apple Maps",
 
@@ -200,10 +212,11 @@ export const translations: Record<Language, TranslationSchema> = {
 
     duaLabel: "A Prayer For The Couples",
     duaTranslation:
-      "“May Allah bless you both, and shower His blessings upon you, and unite you both in goodness.”",
+      "“May Allah bless these two beautiful unions with love, happiness, peace, and endless barakah.”",
     ameen: "Ameen",
 
-    blessingHeading: "We look forward to celebrating this joyous occasion with you.",
+    blessingHeading:
+      "May Allah bless these two beautiful unions with love, happiness, peace, and endless barakah.",
     blessingSub: "29 August • Vista Convention Centre • Vengad",
 
     rsvpLabel: "Will You Join Our Day?",
@@ -225,8 +238,9 @@ export const translations: Record<Language, TranslationSchema> = {
   },
 
   ml: {
-    heroSubtitle: "രണ്ടു കുടുംബങ്ങൾ • ഒരു പവിത്രമായ ആഘോഷം",
-    heroTitle: "ബെയ്സ് & നിഷാദ്",
+    heroSubtitle: "രണ്ട് നവദമ്പതികൾ • ഒരു പവിത്രമായ ആഘോഷം",
+    heroTitle: "രണ്ട് മംഗള ബന്ധങ്ങൾ • ഒരു ആഘോഷം",
+    heroTagline: "രണ്ട് ദമ്പതികൾ, അവിസ്മരണീയമായ ഒരു മംഗള നിമിഷം.",
     heroInviteText: "ഞങ്ങളുടെ വലിയാ സൽക്കാരത്തിലേക്ക് താങ്കളെ സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു",
     heroDateVenue: "2026 ഓഗസ്റ്റ് 29 ശനിയാഴ്ച • വിസ്റ്റ കൺവെൻഷൻ സെന്റർ",
     heroScroll: "തുടങ്ങാൻ താഴേക്ക് സ്ക്രോൾ ചെയ്യുക",
@@ -235,15 +249,19 @@ export const translations: Record<Language, TranslationSchema> = {
     quranTranslation:
       "“തങ്ങളിൽ തന്നെ സമാധാനം കണ്ടെത്തുവാൻ നിങ്ങൾക്കായി നിങ്ങളുടെ വർഗ്ഗത്തിൽ നിന്ന് തന്നെ ഇണകളെ സൃഷ്ടിക്കുകയും, നിങ്ങൾക്കിടയിൽ സ്നേഹവും കരുണയും ഉണ്ടാക്കുകയും ചെയ്തത് അവന്റെ ദൃഷ്ടാന്തങ്ങളിൽ പെട്ടതാണ്.”",
 
-    coupleSubtitle: "രണ്ട് കുടുംബങ്ങൾ ഒന്നിക്കുന്നു",
-    coupleHeading: "ദൈവിക അനുഗ്രഹവും കൃപയും",
+    coupleSubtitle: "രണ്ട് പവിത്രമായ ബന്ധങ്ങൾ",
+    coupleHeading: "രണ്ട് നവദമ്പതികളെ പരിചയപ്പെടാം",
+    groomLabel: "വരൻ",
+    brideLabel: "വധു",
     couple1Desc:
       "സ്നേഹത്തിന്റെയും വിശ്വാസത്തിന്റെയും ഒത്തുചേരലിന്റെയും പുതിയ ജീവിത യാത്ര തുടങ്ങുന്നു.",
     couple2Desc: "സന്തോഷവും കൃപയും നിറഞ്ഞ പവിത്രമായ പുതിയ അധ്യായത്തിലേക്ക് കാലെടുത്തുവെക്കുന്നു.",
-    coupleQuote: "രണ്ട് ആഘോഷങ്ങൾ, അവിസ്മരണീയമായ ഒരു സായാഹ്നം",
+    coupleQuote: "രണ്ട് യാത്രകൾ, രണ്ട് വാഗ്ദാനങ്ങൾ, മനോഹരമായ ഒരു ആഘോഷം",
 
     saveDateLabel: "തീയതി കുറിച്ചുവെക്കൂ",
-    youAreInvited: "നിങ്ങളെ സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു",
+    youAreInvited: "രണ്ട് വിവാഹങ്ങൾ ആഘോഷിക്കാൻ നിങ്ങളെ സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു",
+    invitationSub:
+      "സൈദ് ബെയ്സ് & സൈദത്ത് ബുസ്താന, സൈദ് നിഷാദ് & സൈദത്ത് ജുമൈല നസ്രി എന്നിവരുടെ മംഗളകരമായ വിവാഹത്തിലേക്ക് സ്വാഗതം.",
     dateLabel: "തീയതി",
     dateVal: "29 ഓഗസ്റ്റ്",
     dateSub: "ശനിയാഴ്ച",
@@ -275,18 +293,19 @@ export const translations: Record<Language, TranslationSchema> = {
     scheduleDate: "2026 ഓഗസ്റ്റ് 29 ശനിയാഴ്ച",
     event1Time: "വൈകു. 4:00",
     event1Title: "വലിയാ ചടങ്ങ്",
-    event1Desc: "പ്രിയപ്പെട്ട അതിഥികളുടെ വരവും സ്വീകരണവും",
+    event1Desc:
+      "രണ്ട് ദമ്പതികളുടെയും പുതിയ ജീവിത യാത്രയുടെ മംഗളകരമായ തുടക്കം.",
     event2Time: "വൈകു. 6:30",
     event2Title: "സ്നേഹവിരുന്ന്",
-    event2Desc: "രുചികരമായ മംഗള വിരുന്ന്",
+    event2Desc: "ഇരു കുടുംബങ്ങളും പ്രിയപ്പെട്ടവരും ഒന്നിക്കുന്ന സന്തോഷ സായാഹ്നം.",
     event3Time: "രാത്രി 9:00",
     event3Title: "പ്രാർത്ഥനയും യാത്രയയപ്പും",
-    event3Desc: "പ്രാർത്ഥനകളും നന്ദി പ്രകടനവും",
+    event3Desc: "രണ്ട് നവദമ്പതികൾക്കും ഹൃദയം നിറഞ്ഞ ആശംസകളും പ്രാർത്ഥനകളും.",
 
     galleryLabel: "മനോഹര മുഹൂർത്തങ്ങൾ",
     galleryHeading: "രണ്ട് വാഗ്ദാനങ്ങളുടെ കഥ",
     gallerySub:
-      "പ്രണയവും സൗന്ദര്യവും ദൈവകൃപയും നിറഞ്ഞ ഞങ്ങളുടെ ആഘോഷം.",
+      "കുടുംബവും വിശ്വാസവും സ്നേഹവും നിറഞ്ഞ അന്തരീക്ഷത്തിൽ രണ്ട് യാത്രകളുടെയും വാഗ്ദാനങ്ങളുടെയും ആഘോഷം.",
     portraitLabel: "വലിയാ പോർട്രെയിറ്റ്",
     portraitSub: "സ്നേഹം അതിന്റെ നിത്യവസതി കണ്ടെത്തുന്ന ഇടം",
     sacredTitle: "പവിത്രമായ കാഴ്ചകൾ",
@@ -295,6 +314,7 @@ export const translations: Record<Language, TranslationSchema> = {
     grandSub: "2026 ഓഗസ്റ്റ് 29 ശനിയാഴ്ച",
 
     findWayLabel: "സ്ഥലത്തെത്താൻ",
+    venueSharedSub: "രണ്ട് നവദമ്പതികൾക്കായുള്ള സംയുക്ത ആഘോഷം.",
     googleMapsBtn: "Google Maps",
     appleMapsBtn: "Apple Maps",
 
@@ -307,11 +327,11 @@ export const translations: Record<Language, TranslationSchema> = {
 
     duaLabel: "നവദമ്പതികൾക്കായി പ്രാർത്ഥന",
     duaTranslation:
-      "“അല്ലാഹു നിങ്ങൾക്ക് ഇരുവർക്കും ബറകത്ത് നൽകട്ടെ, നിങ്ങളുടെ മേൽ അനുഗ്രഹം ചൊരിയട്ടെ, നന്മയിൽ നിങ്ങളെ ഒന്നാക്കട്ടെ.”",
+      "“അല്ലാഹു ഈ രണ്ട് ദമ്പതികൾക്കും സ്നേഹവും സമാധാനവും ബറകത്തും നൽകി അനുഗ്രഹിക്കട്ടെ.”",
     ameen: "ആമീൻ",
 
     blessingHeading:
-      "ഈ സന്തോഷ നിമിഷം നിങ്ങളോടൊപ്പം ആഘോഷിക്കാൻ ഞങ്ങൾ കാത്തിരിക്കുന്നു.",
+      "അല്ലാഹു ഈ രണ്ട് ദമ്പതികൾക്കും സ്നേഹവും സമാധാനവും സന്തോഷവും ബറകത്തും നൽകി അനുഗ്രഹിക്കട്ടെ.",
     blessingSub: "ഓഗസ്റ്റ് 29 • വിസ്റ്റ കൺവെൻഷൻ സെന്റർ • വേങ്ങാട്",
 
     rsvpLabel: "ഞങ്ങളോടൊപ്പം പങ്കുചേരുമോ?",
@@ -333,8 +353,9 @@ export const translations: Record<Language, TranslationSchema> = {
   },
 
   ar: {
-    heroSubtitle: "زوجان • احتفال مقدس واحد",
-    heroTitle: "بيس ونشاط",
+    heroSubtitle: "احتفال بعقد قران زوجين مباركين",
+    heroTitle: "عقدان مباركان • احتفال واحد",
+    heroTagline: "زوجان، واحتفال واحد لا يُنسى.",
     heroInviteText: "يتشرفون بدعوتكم لحضور حفل الوليمة المبارك",
     heroDateVenue: "السبت، 29 أغسطس 2026 • مركز فيستا للمؤتمرات",
     heroScroll: "تمرير للبدء",
@@ -343,15 +364,19 @@ export const translations: Record<Language, TranslationSchema> = {
     quranTranslation:
       "«وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً»",
 
-    coupleSubtitle: "عائلتان تتحدان",
-    coupleHeading: "نعمة وبركة إلهية",
+    coupleSubtitle: "عقدان مباركان",
+    coupleHeading: "تعرف على الزوجين",
+    groomLabel: "العريس",
+    brideLabel: "العروس",
     couple1Desc:
       "بدء رحلة الحياة المحاطة بالمحبة والإيمان والوئام.",
     couple2Desc: "الخطو إلى فصل مقدس مليء بالبركة والسرور.",
-    coupleQuote: "احتفالان، وأمسية واحدة لا تُنسى",
+    coupleQuote: "رحلتان، ووعدان، واحتفال واحد جميل",
 
     saveDateLabel: "احفظ التاريخ",
-    youAreInvited: "أنتم مدعوون بكل حب",
+    youAreInvited: "أنتم مدعوون بكل حب للاحتفال بعقد قران زوجين",
+    invitationSub:
+      "انضموا إلينا للاحتفال بزفاف زيد بيس وزيدت بستانة، وزيد نشاط وزيدت جميلة نصري.",
     dateLabel: "التاريخ",
     dateVal: "29 أغسطس",
     dateSub: "السبت",
@@ -383,18 +408,18 @@ export const translations: Record<Language, TranslationSchema> = {
     scheduleDate: "السبت، 29 أغسطس 2026",
     event1Time: "4:00 مساءً",
     event1Title: "حفل الوليمة",
-    event1Desc: "استقبال واستضافة الضيوف الكرام",
+    event1Desc: "الاحتفال بالزوجين وبداية رحلتهما المباركة معاً.",
     event2Time: "6:30 مساءً",
     event2Title: "مأدبة العشاء",
-    event2Desc: "احتفال بهيج ومأدبة فاخرة",
+    event2Desc: "أمسية بهيجة تجمع العائلتين والأحباء.",
     event3Time: "9:00 مساءً",
     event3Title: "الدعاء والوداع",
-    event3Desc: "الدعوات والثناء والامتنان",
+    event3Desc: "تقديم خالص الدعوات والتباريك للزوجين الجديدين.",
 
     galleryLabel: "لحظات سينمائية",
     galleryHeading: "قصة وعدين",
     gallerySub:
-      "تجسيد الرومانسية والأناقة والنعمة الإلهية لاحتفالنا المشترك.",
+      "رحلتان ووعدان واحتفال واحد جميل محاط بالعائلة والإيمان والمحبة.",
     portraitLabel: "صورة الوليمة",
     portraitSub: "حيث يجد الحب مأواه الأبدي",
     sacredTitle: "تفاصيل مقدسة",
@@ -403,6 +428,7 @@ export const translations: Record<Language, TranslationSchema> = {
     grandSub: "السبت، 29 أغسطس 2026",
 
     findWayLabel: "الوصول للمكان",
+    venueSharedSub: "احتفال مشترك لزوجين حديثي الزواج.",
     googleMapsBtn: "Google Maps",
     appleMapsBtn: "Apple Maps",
 
@@ -415,10 +441,11 @@ export const translations: Record<Language, TranslationSchema> = {
 
     duaLabel: "دعاء للزوجين",
     duaTranslation:
-      "«بَارَكَ اللهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ»",
+      "«اللهم بارك لهذين الزوجين واجمع بينهما في خير وارزقهما المودة والرحمة»",
     ameen: "آمين",
 
-    blessingHeading: "نتطلع إلى الاحتفال بهذه المناسبة السعيدة معكم.",
+    blessingHeading:
+      "نسأل الله أن يبارك لهذين الزوجين ويمن عليهما بالمحبة والسلام والبركة الأبدية.",
     blessingSub: "29 أغسطس • مركز فيستا للمؤتمرات • فينجاد",
 
     rsvpLabel: "هل ستنضم إلينا؟",

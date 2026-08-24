@@ -97,7 +97,7 @@ export default function WeddingInfo() {
       <AnimatedBgPattern variant="sand" showStarMandala={true} showLatticeMesh={true} />
 
       {/* Section Header */}
-      <div className="section-content relative z-10 text-center max-w-lg">
+      <div className="section-content relative z-10 text-center max-w-xl">
         <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider sm:tracking-widest2 text-emerald-regal">
           {t("saveDateLabel")}
         </span>
@@ -107,6 +107,9 @@ export default function WeddingInfo() {
         >
           {t("youAreInvited")}
         </RevealText>
+        <p className="mt-3 font-body text-xs sm:text-base font-normal leading-relaxed text-charcoal">
+          {t("invitationSub")}
+        </p>
       </div>
 
       {/* Editorial Responsive Grid */}

@@ -7,16 +7,15 @@ import { EightPointStar } from "./IslamicMotifs";
 import AnimatedBgPattern from "./AnimatedBgPattern";
 import ParticleField from "./ParticleField";
 import { useLanguage } from "../context/LanguageContext";
+import { COUPLES_DATA } from "../lib/couplesConfig";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function CoupleReveal() {
   const { t } = useLanguage();
   const sectionRef = useRef<HTMLElement | null>(null);
-  const card1Ref = useRef<HTMLDivElement | null>(null);
-  const card2Ref = useRef<HTMLDivElement | null>(null);
-  const img1Ref = useRef<HTMLImageElement | null>(null);
-  const img2Ref = useRef<HTMLImageElement | null>(null);
+  const cardRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const imgRefs = useRef<Array<HTMLImageElement | null>>([]);
 
   useEffect(() => {
     const prefersReduced = window.matchMedia(
@@ -25,9 +24,9 @@ export default function CoupleReveal() {
     if (prefersReduced || !sectionRef.current) return;
 
     const ctx = gsap.context(() => {
-      // Subtle staggered scroll entrance for both cards
+      // Subtle staggered scroll entrance for cards
       gsap.fromTo(
-        [card1Ref.current, card2Ref.current],
+        cardRefs.current,
         {
           opacity: 0,
           y: 25,
@@ -50,7 +49,7 @@ export default function CoupleReveal() {
 
       // Micro scroll-linked image scaling
       gsap.fromTo(
-        [img1Ref.current, img2Ref.current],
+        imgRefs.current,
         { scale: 1.02 },
         {
           scale: 1,
@@ -77,87 +76,81 @@ export default function CoupleReveal() {
       <AnimatedBgPattern variant="emerald" showStarMandala={true} showLatticeMesh={true} />
       <ParticleField count={18} />
 
-      <div className="section-content relative z-10 flex max-w-3xl flex-col items-center">
-        <span className="text-[10px] sm:text-xs font-medium uppercase tracking-wider sm:tracking-widest2 text-gold-bright">
+      <div className="section-content relative z-10 flex max-w-4xl flex-col items-center">
+        <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider sm:tracking-widest2 text-gold-bright">
           {t("coupleSubtitle")}
         </span>
         <h2 className="mt-2 text-center font-display text-2xl sm:text-4xl md:text-5xl font-semibold italic text-gold-bright">
           {t("coupleHeading")}
         </h2>
 
-        {/* Dual Arched Compact Matching Dark Green Cards */}
+        {/* Dual Arched Matching Dark Green Couple Cards */}
         <div className="mt-6 sm:mt-10 grid w-full grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-          {/* Card 1: Emerald Arched Card (Zyd Bais & Zydth Busthana) */}
-          <div
-            ref={card1Ref}
-            className="group gold-shimmer-border relative flex flex-col items-center rounded-t-[100px] sm:rounded-t-[140px] border border-gold/30 bg-emerald-regal p-4 sm:p-6 shadow-xl transition-transform duration-500 hover:-translate-y-1.5"
-          >
-            {/* Arched Photo Frame */}
-            <div className="relative h-56 sm:h-72 w-full overflow-hidden rounded-t-[90px] sm:rounded-t-[130px] border border-gold/40 shadow-inner">
-              <img
-                ref={img1Ref}
-                src="/images/couple_reference.jpg"
-                alt="Zyd Bais & Zydth Busthana"
-                className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-emerald-regal/75 via-transparent to-transparent" />
-            </div>
+          {COUPLES_DATA.map((couple, index) => (
+            <div
+              key={couple.id}
+              ref={(el) => {
+                cardRefs.current[index] = el;
+              }}
+              className="group gold-shimmer-border relative flex flex-col items-center rounded-t-[100px] sm:rounded-t-[140px] border border-gold/30 bg-emerald-regal p-4 sm:p-6 shadow-xl transition-transform duration-500 hover:-translate-y-1.5"
+            >
+              {/* Arched Photo Frame */}
+              <div className="relative h-56 sm:h-72 w-full overflow-hidden rounded-t-[90px] sm:rounded-t-[130px] border border-gold/40 shadow-inner">
+                <img
+                  ref={(el) => {
+                    imgRefs.current[index] = el;
+                  }}
+                  src={couple.image}
+                  alt={`${couple.groom} & ${couple.bride}`}
+                  className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-emerald-regal/80 via-transparent to-transparent" />
+              </div>
 
-            <div className="mt-4 sm:mt-5 flex flex-col items-center text-center">
-              <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-gradient-gold">
-                Zyd Bais
-              </h3>
-              <span className="mt-1 mb-0.5 font-display text-lg sm:text-xl italic font-medium text-gold-bright">
-                &amp;
-              </span>
-              <h4 className="mb-2 sm:mb-3.5 font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-gradient-gold">
-                Zydth Busthana
-              </h4>
-              <p className="max-w-xs font-body text-xs font-normal leading-relaxed text-[#E0D4B8]">
-                {t("couple1Desc")}
-              </p>
-            </div>
-          </div>
+              <div className="mt-4 sm:mt-5 flex w-full flex-col items-center text-center">
+                {/* Groom Block */}
+                <div className="flex flex-col items-center">
+                  <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-widest text-gold-bright/70">
+                    {t(couple.groomLabelKey as any)}
+                  </span>
+                  <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-gradient-gold">
+                    {couple.groom}
+                  </h3>
+                </div>
 
-          {/* Card 2: Emerald Arched Card (Zyd Nishad & Zydth Jumaila Nasri) */}
-          <div
-            ref={card2Ref}
-            className="group gold-shimmer-border relative flex flex-col items-center rounded-t-[100px] sm:rounded-t-[140px] border border-gold/30 bg-emerald-regal p-4 sm:p-6 shadow-xl transition-transform duration-500 hover:-translate-y-1.5"
-          >
-            {/* Arched Photo Frame */}
-            <div className="relative h-56 sm:h-72 w-full overflow-hidden rounded-t-[90px] sm:rounded-t-[130px] border border-gold/40 shadow-inner">
-              <img
-                ref={img2Ref}
-                src="/images/couple_nishad.jpg"
-                alt="Zyd Nishad & Zydth Jumaila Nasri"
-                className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-emerald-regal/75 via-transparent to-transparent" />
-            </div>
+                {/* Decorative & Separator */}
+                <div className="my-1.5 flex items-center justify-center gap-2">
+                  <span className="h-px w-6 bg-gold/40" />
+                  <span className="font-display text-lg sm:text-xl italic font-medium text-gold-bright">
+                    &amp;
+                  </span>
+                  <span className="h-px w-6 bg-gold/40" />
+                </div>
 
-            <div className="mt-4 sm:mt-5 flex flex-col items-center text-center">
-              <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-gradient-gold">
-                Zyd Nishad
-              </h3>
-              <span className="mt-1 mb-0.5 font-display text-lg sm:text-xl italic font-medium text-gold-bright">
-                &amp;
-              </span>
-              <h4 className="mb-2 sm:mb-3.5 font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-gradient-gold">
-                Zydth Jumaila Nasri
-              </h4>
-              <p className="max-w-xs font-body text-xs font-normal leading-relaxed text-[#E0D4B8]">
-                {t("couple2Desc")}
-              </p>
+                {/* Bride Block */}
+                <div className="flex flex-col items-center">
+                  <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-widest text-gold-bright/70">
+                    {t(couple.brideLabelKey as any)}
+                  </span>
+                  <h4 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-gradient-gold">
+                    {couple.bride}
+                  </h4>
+                </div>
+
+                <p className="mt-3.5 max-w-xs font-body text-xs font-normal leading-relaxed text-[#E0D4B8]">
+                  {t(couple.descKey as any)}
+                </p>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
 
-        <div className="mt-10 flex items-center justify-center gap-3 text-center">
-          <EightPointStar className="h-5 w-5 text-bronze" />
-          <p className="font-display text-lg italic font-medium text-gold-bright sm:text-xl">
-            {t("coupleQuote")}
+        <div className="mt-10 flex items-center justify-center gap-3 text-center px-4">
+          <EightPointStar className="h-5 w-5 text-bronze shrink-0" />
+          <p className="font-display text-base sm:text-lg md:text-xl italic font-medium text-gold-bright">
+            “{t("coupleQuote")}”
           </p>
-          <EightPointStar className="h-5 w-5 text-bronze" />
+          <EightPointStar className="h-5 w-5 text-bronze shrink-0" />
         </div>
       </div>
     </section>

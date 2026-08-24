@@ -11,15 +11,15 @@ export interface EventConfig {
 }
 
 export const WEDDING_EVENT: EventConfig = {
-  title: "Bais & Nishad Wedding",
+  title: "Joint Walima: Zyd Bais & Zydth Busthana | Zyd Nishad & Zydth Jumaila Nasri",
   startDate: "2026-08-29",
   startTime: "16:00", // 4:00 PM IST
   endDate: "2026-08-29",
   endTime: "22:00",   // 10:00 PM IST
   timezone: "Asia/Kolkata",
   venue: "Vista Convention Centre, Vengad",
-  description: "Wedding celebration of Bais & Nishad",
-  filename: "bais-nishad-wedding.ics",
+  description: "Join us as we celebrate the marriages of Zyd Bais & Zydth Busthana, and Zyd Nishad & Zydth Jumaila Nasri.",
+  filename: "walima-celebration-bais-nishad.ics",
 };
 
 export const VENUE_DETAILS = {

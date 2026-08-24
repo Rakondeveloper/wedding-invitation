@@ -24,21 +24,21 @@ import StickyVenueButton from "@/components/StickyVenueButton";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bais-nishad-wedding-invitation.vercel.app"),
-  title: "Bais & Nishad — Wedding Invitation",
+  title: "Walima Celebration — Zyd Bais & Zydth Busthana | Zyd Nishad & Zydth Jumaila Nasri",
   description:
-    "You are cordially invited to celebrate the wedding of Bais and Nishad — 29 August, Vista Convention Centre, Vengad.",
+    "You are cordially invited to celebrate the joint Walima of Zyd Bais & Zydth Busthana and Zyd Nishad & Zydth Jumaila Nasri — 29 August, Vista Convention Centre, Vengad.",
   openGraph: {
-    title: "Bais & Nishad — Wedding Invitation",
+    title: "Walima Celebration — Zyd Bais & Zydth Busthana | Zyd Nishad & Zydth Jumaila Nasri",
     description:
-      "You are cordially invited to celebrate the wedding of Bais and Nishad — 29 August, Vista Convention Centre, Vengad.",
+      "You are cordially invited to celebrate the joint Walima of Zyd Bais & Zydth Busthana and Zyd Nishad & Zydth Jumaila Nasri — 29 August, Vista Convention Centre, Vengad.",
     url: "https://bais-nishad-wedding-invitation.vercel.app",
-    siteName: "Bais & Nishad — Wedding Invitation",
+    siteName: "Walima Celebration — Zyd Bais & Zydth Busthana | Zyd Nishad & Zydth Jumaila Nasri",
     images: [
       {
         url: "/images/couple_reference.jpg",
         width: 1200,
         height: 630,
-        alt: "Bais & Nishad — Wedding Invitation",
+        alt: "Walima Celebration — Zyd Bais & Zydth Busthana | Zyd Nishad & Zydth Jumaila Nasri",
       },
     ],
     locale: "en_US",
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bais & Nishad — Wedding Invitation",
+    title: "Walima Celebration — Zyd Bais & Zydth Busthana | Zyd Nishad & Zydth Jumaila Nasri",
     description:
-      "You are cordially invited to celebrate the wedding of Bais and Nishad — 29 August, Vista Convention Centre, Vengad.",
+      "You are cordially invited to celebrate the joint Walima of Zyd Bais & Zydth Busthana and Zyd Nishad & Zydth Jumaila Nasri — 29 August, Vista Convention Centre, Vengad.",
     images: ["/images/couple_reference.jpg"],
   },
 };
