@@ -4,6 +4,9 @@ export interface TranslationSchema {
   // Hero
   heroSubtitle: string;
   heroTitle: string;
+  twoUnionsLabel: string;
+  union1Label: string;
+  union2Label: string;
   heroTagline: string;
   heroInviteText: string;
   heroDateVenue: string;
@@ -125,7 +128,10 @@ export const translations: Record<Language, TranslationSchema> = {
   en: {
     heroSubtitle: "A Celebration of Two Beautiful Unions",
     heroTitle: "Two Unions • One Celebration",
-    heroTagline: "Two couples, one unforgettable celebration.",
+    twoUnionsLabel: "THE TWO UNIONS",
+    union1Label: "THE FIRST UNION",
+    union2Label: "THE SECOND UNION",
+    heroTagline: "Together with their families, they invite you to celebrate their Walima.",
     heroInviteText: "Cordially invite you to celebrate their Walima",
     heroDateVenue: "Saturday, 29 August 2026 • Vista Convention Centre",
     heroScroll: "Scroll To Begin",
@@ -240,7 +246,10 @@ export const translations: Record<Language, TranslationSchema> = {
   ml: {
     heroSubtitle: "രണ്ട് നവദമ്പതികൾ • ഒരു പവിത്രമായ ആഘോഷം",
     heroTitle: "രണ്ട് മംഗള ബന്ധങ്ങൾ • ഒരു ആഘോഷം",
-    heroTagline: "രണ്ട് ദമ്പതികൾ, അവിസ്മരണീയമായ ഒരു മംഗള നിമിഷം.",
+    twoUnionsLabel: "രണ്ട് മംഗള ബന്ധങ്ങൾ",
+    union1Label: "ആദ്യ മംഗള ബന്ധം",
+    union2Label: "രണ്ടാമത്തെ മംഗള ബന്ധം",
+    heroTagline: "കുടുംബത്തോടൊപ്പം ഞങ്ങളുടെ വലിയാ സൽക്കാരത്തിലേക്ക് താങ്കളെ സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു.",
     heroInviteText: "ഞങ്ങളുടെ വലിയാ സൽക്കാരത്തിലേക്ക് താങ്കളെ സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു",
     heroDateVenue: "2026 ഓഗസ്റ്റ് 29 ശനിയാഴ്ച • വിസ്റ്റ കൺവെൻഷൻ സെന്റർ",
     heroScroll: "തുടങ്ങാൻ താഴേക്ക് സ്ക്രോൾ ചെയ്യുക",
@@ -355,7 +364,10 @@ export const translations: Record<Language, TranslationSchema> = {
   ar: {
     heroSubtitle: "احتفال بعقد قران زوجين مباركين",
     heroTitle: "عقدان مباركان • احتفال واحد",
-    heroTagline: "زوجان، واحتفال واحد لا يُنسى.",
+    twoUnionsLabel: "عقدان مباركان",
+    union1Label: "الاتحاد الأول",
+    union2Label: "الاتحاد الثاني",
+    heroTagline: "مع عائلاتهم، يتشرفون بدعوتكم لحضور حفل الوليمة المبارك.",
     heroInviteText: "يتشرفون بدعوتكم لحضور حفل الوليمة المبارك",
     heroDateVenue: "السبت، 29 أغسطس 2026 • مركز فيستا للمؤتمرات",
     heroScroll: "تمرير للبدء",

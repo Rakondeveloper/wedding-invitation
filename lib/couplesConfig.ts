@@ -10,6 +10,37 @@ export interface CoupleData {
   descKey: keyof TranslationSchema;
 }
 
+export interface HeroCoupleData {
+  id: "bais" | "nishad";
+  tabLabel: string;
+  unionLabelKey: keyof TranslationSchema;
+  groom: string;
+  bride: string;
+  avatar: string;
+  bgVariant: "floral" | "star";
+}
+
+export const HERO_COUPLES: HeroCoupleData[] = [
+  {
+    id: "bais",
+    tabLabel: "Bais & Busthana",
+    unionLabelKey: "union1Label",
+    groom: "Zyd Bais",
+    bride: "Zydth Busthana",
+    avatar: "/images/couple_reference.jpg",
+    bgVariant: "floral",
+  },
+  {
+    id: "nishad",
+    tabLabel: "Nishad & Jumaila",
+    unionLabelKey: "union2Label",
+    groom: "Zyd Nishad",
+    bride: "Zydth Jumaila Nasri",
+    avatar: "/images/couple_nishad.jpg",
+    bgVariant: "star",
+  },
+];
+
 export const COUPLES_DATA: CoupleData[] = [
   {
     id: "couple-1",
