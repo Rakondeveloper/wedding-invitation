@@ -36,8 +36,8 @@ function Ring({
   const offset = circumference * (1 - pct);
 
   return (
-    <div className="flex flex-col items-center gap-3">
-      <div className="relative h-24 w-24 sm:h-32 sm:w-32">
+    <div className="flex flex-col items-center gap-2 sm:gap-3">
+      <div className="relative h-20 w-20 sm:h-32 sm:w-32">
         <svg viewBox="0 0 100 100" className="h-full w-full -rotate-90">
           <circle
             cx="50"
@@ -66,11 +66,11 @@ function Ring({
             </linearGradient>
           </defs>
         </svg>
-        <div className="absolute inset-0 flex items-center justify-center font-display text-3xl font-semibold text-emerald-regal sm:text-4xl">
+        <div className="absolute inset-0 flex items-center justify-center font-display text-2xl font-semibold text-emerald-regal sm:text-4xl">
           {value}
         </div>
       </div>
-      <span className="text-xs font-medium uppercase tracking-widest2 text-bronze-dark">
+      <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider sm:tracking-widest2 text-bronze-dark">
         {label}
       </span>
     </div>

@@ -119,7 +119,7 @@ export default function WeddingInfo() {
             ref={(el) => {
               cardRefs.current[i] = el;
             }}
-            className={`flex flex-col items-center gold-shimmer-border rounded-t-[40px] sm:rounded-t-[70px] border border-gold/40 bg-[#F5EEDF]/95 backdrop-blur-sm p-3.5 sm:p-6 text-center shadow-md transition-all duration-300 hover:-translate-y-1 opacity-0 ${
+            className={`flex flex-col items-center gold-shimmer-border rounded-t-[32px] sm:rounded-t-[70px] border border-gold/40 bg-[#F5EEDF]/95 backdrop-blur-sm pt-5 sm:pt-6 pb-4 sm:pb-6 px-2.5 sm:px-6 text-center shadow-md transition-all duration-300 hover:-translate-y-1 opacity-0 ${
               item.isWideOnMobile ? "col-span-2 lg:col-span-1" : "col-span-1"
             }`}
           >

@@ -105,7 +105,7 @@ export default function Story() {
         }
 
         // Content Box Outward Reveal
-        const xInitial = isMobile ? 35 : isEven ? -45 : 45;
+        const xInitial = isMobile ? 12 : isEven ? -45 : 45;
 
         gsap.fromTo(
           item,

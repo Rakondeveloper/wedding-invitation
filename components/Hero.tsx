@@ -145,19 +145,19 @@ export default function Hero({ ready }: { ready: boolean }) {
         </div>
 
         {/* Dual Couples Visual Grouping */}
-        <div ref={titleBlockRef} className="flex flex-col items-center gap-2 sm:gap-3 opacity-0">
+        <div ref={titleBlockRef} className="flex flex-col items-center gap-2 sm:gap-3 opacity-0 w-full px-1">
           {COUPLES_DATA.map((couple, idx) => (
-            <div key={couple.id} className="flex flex-col items-center">
-              <h1 className="font-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl tracking-normal sm:tracking-wide text-emerald-regal font-semibold leading-tight">
-                <span>{couple.groom}</span>
-                <span className="mx-2 font-display italic font-medium text-bronze-dark">&amp;</span>
-                <span>{couple.bride}</span>
+            <div key={couple.id} className="flex flex-col items-center w-full">
+              <h1 className="font-display text-xl sm:text-3xl md:text-5xl lg:text-6xl tracking-tight sm:tracking-wide text-emerald-regal font-semibold leading-tight text-center flex flex-wrap items-center justify-center gap-x-1.5 sm:gap-x-2">
+                <span className="whitespace-nowrap">{couple.groom}</span>
+                <span className="font-display italic font-medium text-bronze-dark">&amp;</span>
+                <span className="whitespace-nowrap">{couple.bride}</span>
               </h1>
               {idx === 0 && (
-                <div className="my-1.5 flex items-center justify-center gap-3">
-                  <span className="h-px w-8 bg-bronze/40" />
-                  <span className="font-display italic text-base sm:text-xl font-medium text-bronze-dark">&amp;</span>
-                  <span className="h-px w-8 bg-bronze/40" />
+                <div className="my-1 sm:my-1.5 flex items-center justify-center gap-2 sm:gap-3">
+                  <span className="h-px w-6 sm:w-8 bg-bronze/40" />
+                  <span className="font-display italic text-sm sm:text-xl font-medium text-bronze-dark">&amp;</span>
+                  <span className="h-px w-6 sm:w-8 bg-bronze/40" />
                 </div>
               )}
             </div>

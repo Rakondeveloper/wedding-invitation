@@ -93,7 +93,7 @@ export default function CoupleReveal() {
               className="group gold-shimmer-border relative flex flex-col items-center rounded-t-[100px] sm:rounded-t-[140px] border border-gold/30 bg-emerald-regal p-4 sm:p-6 shadow-xl transition-transform duration-500 hover:-translate-y-1.5"
             >
               {/* Arched Photo Frame */}
-              <div className="relative h-56 sm:h-72 w-full overflow-hidden rounded-t-[90px] sm:rounded-t-[130px] border border-gold/40 shadow-inner">
+              <div className="relative h-52 sm:h-72 w-full overflow-hidden rounded-t-[75px] sm:rounded-t-[130px] border border-gold/40 shadow-inner">
                 <img
                   ref={(el) => {
                     imgRefs.current[index] = el;
@@ -105,32 +105,32 @@ export default function CoupleReveal() {
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-emerald-regal/80 via-transparent to-transparent" />
               </div>
 
-              <div className="mt-4 sm:mt-5 flex w-full flex-col items-center text-center">
+              <div className="mt-4 sm:mt-5 flex w-full flex-col items-center text-center px-1">
                 {/* Groom Block */}
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center w-full">
                   <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-widest text-gold-bright/70">
                     {t(couple.groomLabelKey)}
                   </span>
-                  <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-gradient-gold">
+                  <h3 className="font-display text-xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-gradient-gold break-words">
                     {couple.groom}
                   </h3>
                 </div>
 
                 {/* Decorative & Separator */}
                 <div className="my-1.5 flex items-center justify-center gap-2">
-                  <span className="h-px w-6 bg-gold/40" />
-                  <span className="font-display text-lg sm:text-xl italic font-medium text-gold-bright">
+                  <span className="h-px w-5 sm:w-6 bg-gold/40" />
+                  <span className="font-display text-base sm:text-xl italic font-medium text-gold-bright">
                     &amp;
                   </span>
-                  <span className="h-px w-6 bg-gold/40" />
+                  <span className="h-px w-5 sm:w-6 bg-gold/40" />
                 </div>
 
                 {/* Bride Block */}
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center w-full">
                   <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-widest text-gold-bright/70">
                     {t(couple.brideLabelKey)}
                   </span>
-                  <h4 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-gradient-gold">
+                  <h4 className="font-display text-xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-gradient-gold break-words">
                     {couple.bride}
                   </h4>
                 </div>

@@ -28,7 +28,7 @@ export default function IslamicDecor() {
       <BlessingBackground />
 
       {/* Center Arched Framed Card matching reference image */}
-      <div className="section-content gold-shimmer-border relative z-10 w-full max-w-2xl rounded-t-[90px] sm:rounded-t-[140px] border border-gold/40 bg-[#F5EEDF]/95 backdrop-blur-sm p-5 sm:p-12 text-center shadow-xl">
+      <div className="section-content gold-shimmer-border relative z-10 w-full max-w-2xl rounded-t-[70px] sm:rounded-t-[140px] border border-gold/40 bg-[#F5EEDF]/95 backdrop-blur-sm pt-8 sm:pt-12 pb-6 sm:pb-12 px-4 sm:px-12 text-center shadow-xl">
         <div className="mx-auto mb-4 sm:mb-6 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-gold/50 bg-[#EFE5CE]/60 shadow-sm animate-pulse">
           <EightPointStar className="h-5 w-5 sm:h-6 sm:w-6 text-bronze" />
         </div>
