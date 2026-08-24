@@ -80,8 +80,9 @@ export default function WeddingInfo() {
       sub: t("venueSub"),
       isWideOnMobile: true,
       icon: (
-        <svg className="h-6 w-6 text-gold-bright" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+        <svg className="h-6 w-6 text-gold-bright shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="none" stroke="currentColor" />
+          <circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" />
         </svg>
       ),
     },

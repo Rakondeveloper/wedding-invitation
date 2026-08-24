@@ -88,7 +88,7 @@ export default function StickyVenueButton() {
                   viewBox="0 0 24 24"
                   aria-hidden="true"
                 >
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5-2.5z" />
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5-2.5z" fill="currentColor" />
                 </svg>
               </div>
               <div className="flex flex-col">
@@ -109,11 +109,11 @@ export default function StickyVenueButton() {
             >
               <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-regal text-gold-bright group-hover:bg-gold-bright group-hover:text-emerald-regal transition-colors">
                 <svg
-                  className="h-3.5 w-3.5 fill-current"
+                  className="h-3.5 w-3.5 fill-current shrink-0"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
                 >
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5-2.5z" />
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5-2.5z" fill="currentColor" />
                 </svg>
               </div>
               <div className="flex flex-col">
@@ -172,7 +172,7 @@ export default function StickyVenueButton() {
             viewBox="0 0 24 24"
             aria-hidden="true"
           >
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5-2.5z" />
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5-2.5z" fill="currentColor" />
           </svg>
         </span>
 

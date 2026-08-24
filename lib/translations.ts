@@ -186,7 +186,7 @@ export const translations: Record<Language, TranslationSchema> = {
     event1Title: "Walima Ceremony",
     event1Desc:
       "Celebrating two couples and the beginning of their beautiful journeys together.",
-    event2Time: "5:00 PM",
+    event2Time: "3:00 PM",
     event2Title: "Dinner & Feast",
     event2Desc: "A joyful evening shared by both families and loved ones.",
     event3Time: "9:00 PM",
