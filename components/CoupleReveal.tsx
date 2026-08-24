@@ -111,7 +111,7 @@ export default function CoupleReveal() {
                 {/* Groom Block */}
                 <div className="flex flex-col items-center">
                   <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-widest text-gold-bright/70">
-                    {t(couple.groomLabelKey as any)}
+                    {t(couple.groomLabelKey)}
                   </span>
                   <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-gradient-gold">
                     {couple.groom}
@@ -130,7 +130,7 @@ export default function CoupleReveal() {
                 {/* Bride Block */}
                 <div className="flex flex-col items-center">
                   <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-widest text-gold-bright/70">
-                    {t(couple.brideLabelKey as any)}
+                    {t(couple.brideLabelKey)}
                   </span>
                   <h4 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-gradient-gold">
                     {couple.bride}
@@ -138,7 +138,7 @@ export default function CoupleReveal() {
                 </div>
 
                 <p className="mt-3.5 max-w-xs font-body text-xs font-normal leading-relaxed text-[#E0D4B8]">
-                  {t(couple.descKey as any)}
+                  {t(couple.descKey)}
                 </p>
               </div>
             </div>

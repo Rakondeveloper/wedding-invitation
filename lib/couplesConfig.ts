@@ -1,11 +1,13 @@
+import { TranslationSchema } from "./translations";
+
 export interface CoupleData {
   id: string;
   groom: string;
-  groomLabelKey: string;
+  groomLabelKey: keyof TranslationSchema;
   bride: string;
-  brideLabelKey: string;
+  brideLabelKey: keyof TranslationSchema;
   image: string;
-  descKey: string;
+  descKey: keyof TranslationSchema;
 }
 
 export const COUPLES_DATA: CoupleData[] = [
