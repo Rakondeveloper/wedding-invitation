@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import StoryBackground from "./backgrounds/StoryBackground";
@@ -116,21 +117,24 @@ export default function CinematicGallery() {
         </p>
       </div>
 
-      {/* Unfolding Photo Showcase */}
+      {/* Editorial Showcase */}
       <div className="section-content relative z-10 w-full max-w-5xl">
-        {/* Main Central Unfolding Wide Card */}
+        {/* Main Central Unfolding Wide Editorial Banner */}
         <div
           ref={mainImageRef}
-          className="relative h-[45vh] min-h-[300px] sm:min-h-[400px] w-full overflow-hidden rounded-[16px] sm:rounded-[20px] border border-gold/40 shadow-2xl"
+          className="group relative h-[45vh] min-h-[320px] sm:min-h-[420px] w-full overflow-hidden rounded-[16px] sm:rounded-[20px] border border-gold/40 shadow-2xl bg-[#F5EEDF]"
         >
-          <img
-            src="/images/couple_unfold_1.png"
-            alt="Cinematic couple walking"
-            className="h-full w-full object-cover object-center"
+          <Image
+            src="/images/gallery-img.webp"
+            alt="Walima celebration couple"
+            fill
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            className="object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-105"
+            priority
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-emerald-regal/85 via-emerald-regal/20 to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-emerald-regal/90 via-emerald-regal/30 to-transparent opacity-90" />
           
-          <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8 flex flex-col items-center sm:items-start text-ivory">
+          <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8 flex flex-col items-center sm:items-start text-ivory z-10">
             <span className="text-[10px] sm:text-xs font-medium uppercase tracking-wider sm:tracking-widest2 text-gold-bright">
               {t("portraitLabel")}
             </span>
@@ -140,17 +144,20 @@ export default function CinematicGallery() {
           </div>
         </div>
 
-        {/* Side Floating Arched Accent Photos */}
+        {/* Side Floating Arched Accent Cards */}
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
+          {/* Card 1: Sacred Details */}
           <div
             ref={frameLeftRef}
-            className="relative flex flex-col rounded-t-[120px] border border-gold/40 bg-[#F5EEDF] p-5 shadow-xl backdrop-blur-sm"
+            className="group relative flex flex-col rounded-t-[120px] border border-gold/40 bg-[#F5EEDF] p-5 shadow-xl backdrop-blur-sm"
           >
             <div className="relative h-72 w-full overflow-hidden rounded-t-[100px]">
-              <img
-                src="/images/couple_unfold_2.png"
-                alt="Henna and gold ring detail"
-                className="h-full w-full object-cover"
+              <Image
+                src="/images/wedding/islamic-wedding-events.webp"
+                alt="Sacred details of Islamic wedding celebration"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
               />
             </div>
             <div className="mt-5 text-center">
@@ -161,15 +168,18 @@ export default function CinematicGallery() {
             </div>
           </div>
 
+          {/* Card 2: Grand Celebration */}
           <div
             ref={frameRightRef}
-            className="relative flex flex-col rounded-t-[120px] border border-gold/40 bg-[#F5EEDF] p-5 shadow-xl backdrop-blur-sm"
+            className="group relative flex flex-col rounded-t-[120px] border border-gold/40 bg-[#F5EEDF] p-5 shadow-xl backdrop-blur-sm"
           >
             <div className="relative h-72 w-full overflow-hidden rounded-t-[100px]">
-              <img
-                src="/images/couple_hero.png"
-                alt="Palace portrait"
-                className="h-full w-full object-cover"
+              <Image
+                src="/images/wedding/grand-celebration.jpg"
+                alt="Illuminated palace wedding celebration archway"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
               />
             </div>
             <div className="mt-5 text-center">
@@ -182,6 +192,5 @@ export default function CinematicGallery() {
         </div>
       </div>
     </section>
-
   );
 }

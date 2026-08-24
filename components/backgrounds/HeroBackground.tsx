@@ -50,49 +50,60 @@ export default function HeroBackground({
             <g className="transition-all duration-700">
               <circle
                 cx="300"
-                cy="120"
-                r="48"
+                cy="100"
+                r="38"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1"
+                strokeDasharray="3 3"
                 className="animate-spin-slow"
               />
               <circle
                 cx="300"
-                cy="120"
-                r="36"
+                cy="100"
+                r="26"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="0.75"
-                strokeDasharray="3 3"
                 className="animate-spin-reverse-slow"
               />
               <path
-                d="M 300 70 Q 280 110 300 150 Q 320 110 300 70 Z"
+                d="M 300 65 Q 284 100 300 135 Q 316 100 300 65 Z"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="0.75"
               />
             </g>
           ) : (
-            /* Tab 2: Geometric Star Arch Crown Accent */
+            /* Tab 2: Concentric Star Arch Crown Accent */
             <g className="transition-all duration-700">
+              {/* Outer Dashed Halo Ring */}
+              <circle
+                cx="300"
+                cy="100"
+                r="38"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1"
+                strokeDasharray="3 3"
+                className="animate-spin-reverse-slow"
+              />
+              {/* Concentric Inner Solid Ring */}
+              <circle
+                cx="300"
+                cy="100"
+                r="26"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="0.75"
+              />
+              {/* Perfect Concentric 8-Point Star centered at (300, 100) */}
               <polygon
-                points="300,72 312,108 348,120 312,132 300,168 288,132 252,120 288,108"
+                points="300,76 307,93 324,100 307,107 300,124 293,107 276,100 293,93"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1"
                 className="animate-spin-slow"
-              />
-              <circle
-                cx="300"
-                cy="120"
-                r="42"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="0.75"
-                strokeDasharray="2 4"
-                className="animate-spin-reverse-slow"
               />
             </g>
           )}
