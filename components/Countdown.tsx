@@ -3,13 +3,13 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import CountdownBackground from "./backgrounds/CountdownBackground";
 import RevealText from "./RevealText";
-import AnimatedBgPattern from "./AnimatedBgPattern";
 import { useLanguage } from "../context/LanguageContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Wedding: Saturday 29 August 2026, 4:00 PM IST.
+// Wedding: Saturday 29 August 2026, 3:00 PM IST.
 const TARGET = new Date("2026-08-29T16:00:00+05:30").getTime();
 
 function getRemaining() {
@@ -120,7 +120,7 @@ export default function Countdown() {
       id="countdown"
       className="full-width-section relative flex min-h-0 w-full flex-col items-center justify-center gap-6 sm:gap-12 overflow-hidden bg-[#EAE0C6] px-4 sm:px-6 py-10 sm:py-16 md:py-20"
     >
-      <AnimatedBgPattern variant="cream" showStarMandala={true} showLatticeMesh={true} />
+      <CountdownBackground />
 
       <div className="section-content relative z-10 text-center max-w-md">
         <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider sm:tracking-widest2 text-emerald-regal">

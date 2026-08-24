@@ -3,9 +3,8 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import CouplesBackground from "./backgrounds/CouplesBackground";
 import { EightPointStar } from "./IslamicMotifs";
-import AnimatedBgPattern from "./AnimatedBgPattern";
-import ParticleField from "./ParticleField";
 import { useLanguage } from "../context/LanguageContext";
 import { COUPLES_DATA } from "../lib/couplesConfig";
 
@@ -73,8 +72,7 @@ export default function CoupleReveal() {
       id="couples"
       className="full-width-section relative flex min-h-0 w-full flex-col items-center justify-center overflow-hidden bg-emerald-regal px-4 sm:px-6 py-10 sm:py-16 md:py-20"
     >
-      <AnimatedBgPattern variant="emerald" showStarMandala={true} showLatticeMesh={true} />
-      <ParticleField count={18} />
+      <CouplesBackground />
 
       <div className="section-content relative z-10 flex max-w-4xl flex-col items-center">
         <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider sm:tracking-widest2 text-gold-bright">

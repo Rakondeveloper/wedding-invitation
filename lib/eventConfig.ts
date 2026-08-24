@@ -13,7 +13,7 @@ export interface EventConfig {
 export const WEDDING_EVENT: EventConfig = {
   title: "Joint Walima: Zyd Bais & Zydth Busthana | Zyd Nishad & Zydth Jumaila Nasri",
   startDate: "2026-08-29",
-  startTime: "16:00", // 4:00 PM IST
+  startTime: "16:00", // 3:00 PM IST
   endDate: "2026-08-29",
   endTime: "22:00",   // 10:00 PM IST
   timezone: "Asia/Kolkata",

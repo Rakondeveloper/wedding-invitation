@@ -3,8 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import AnimatedBgPattern from "./AnimatedBgPattern";
-import ParticleField from "./ParticleField";
+import DuaBackground from "./backgrounds/DuaBackground";
 import { useLanguage } from "../context/LanguageContext";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -56,8 +55,7 @@ export default function Dua() {
       id="dua"
       className="full-width-section relative flex min-h-0 w-full items-center justify-center overflow-hidden bg-[#F3EBDD] px-4 sm:px-6 py-10 sm:py-16 md:py-20"
     >
-      <AnimatedBgPattern variant="cream" showStarMandala={true} showLatticeMesh={true} />
-      <ParticleField count={14} />
+      <DuaBackground />
 
       <div
         ref={glowRef}

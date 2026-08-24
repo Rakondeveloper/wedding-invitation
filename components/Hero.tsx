@@ -3,9 +3,8 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import ParticleField from "./ParticleField";
+import HeroBackground from "./backgrounds/HeroBackground";
 import { EightPointStar } from "./IslamicMotifs";
-import AnimatedBgPattern from "./AnimatedBgPattern";
 import { useLanguage } from "../context/LanguageContext";
 import { COUPLES_DATA } from "../lib/couplesConfig";
 
@@ -128,41 +127,7 @@ export default function Hero({ ready }: { ready: boolean }) {
       id="hero"
       className="full-width-section relative flex min-h-[85vh] sm:min-h-[100vh] w-full items-center justify-center overflow-hidden py-10 px-4 sm:px-6"
     >
-      <AnimatedBgPattern variant="cream" showStarMandala={true} showLatticeMesh={true} />
-
-      {/* Soft warm gold halo background */}
-      <div
-        ref={glowRef}
-        className="pointer-events-none absolute left-1/2 top-[42%] h-[75vh] w-[75vh] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-0"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(201,162,75,0.22) 0%, rgba(239,232,216,0.6) 50%, rgba(245,238,223,1) 100%)",
-        }}
-        aria-hidden="true"
-      />
-
-      {/* Decorative Gold Arch vector framing in warm bronze */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <svg viewBox="0 0 600 800" className="h-[65vh] sm:h-[85vh] max-h-[720px] w-auto text-bronze opacity-40">
-          <path
-            d="M 100 800 L 100 300 A 200 200 0 0 1 500 300 L 500 800"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeDasharray="4 4"
-          />
-          <path
-            d="M 120 800 L 120 310 A 180 180 0 0 1 480 310 L 480 800"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1"
-          />
-          <circle cx="300" cy="120" r="45" fill="none" stroke="currentColor" strokeWidth="1" className="animate-spin-slow" />
-        </svg>
-      </div>
-
-      {/* Floating particles */}
-      <ParticleField count={20} />
+      <HeroBackground />
 
       {/* Hero Content */}
       <div

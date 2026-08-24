@@ -5,8 +5,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Crescent, EightPointStar } from "./IslamicMotifs";
 import RevealText from "./RevealText";
-import AnimatedBgPattern from "./AnimatedBgPattern";
-import ParticleField from "./ParticleField";
+import FooterBackground from "./backgrounds/FooterBackground";
 import { useLanguage } from "../context/LanguageContext";
 import { COUPLES_DATA } from "../lib/couplesConfig";
 
@@ -45,8 +44,7 @@ export default function FinalBlessing() {
       id="closing"
       className="full-width-section relative flex min-h-0 w-full flex-col items-center justify-center gap-6 sm:gap-8 overflow-hidden bg-[#142D27] px-4 sm:px-6 py-10 sm:py-16 md:py-20"
     >
-      <AnimatedBgPattern variant="emerald" showStarMandala={true} showLatticeMesh={true} />
-      <ParticleField count={22} />
+      <FooterBackground />
 
       <div
         ref={moonRef}

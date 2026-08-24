@@ -3,8 +3,8 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import TimelineBackground from "./backgrounds/TimelineBackground";
 import { LatticeBand } from "./IslamicMotifs";
-import AnimatedBgPattern from "./AnimatedBgPattern";
 import { useLanguage } from "../context/LanguageContext";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -148,7 +148,7 @@ export default function Story() {
       id="timeline"
       className="full-width-section relative flex min-h-0 w-full flex-col items-center justify-center overflow-hidden bg-[#EAE0C6] px-4 sm:px-6 py-10 sm:py-16 md:py-20"
     >
-      <AnimatedBgPattern variant="cream" showStarMandala={true} showLatticeMesh={true} />
+      <TimelineBackground />
       <LatticeBand className="absolute top-8 h-6 w-full max-w-2xl text-bronze opacity-40" />
 
       <div className="section-content relative z-10 flex max-w-3xl flex-col items-center text-center">

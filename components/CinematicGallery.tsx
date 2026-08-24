@@ -3,8 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import AnimatedBgPattern from "./AnimatedBgPattern";
-import ParticleField from "./ParticleField";
+import StoryBackground from "./backgrounds/StoryBackground";
 import { useLanguage } from "../context/LanguageContext";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -103,8 +102,7 @@ export default function CinematicGallery() {
       id="cinematic-gallery"
       className="full-width-section relative flex min-h-0 w-full flex-col items-center justify-center overflow-hidden bg-[#F3EBDD] px-4 sm:px-6 py-10 sm:py-16 md:py-20"
     >
-      <AnimatedBgPattern variant="cream" showStarMandala={true} showLatticeMesh={true} />
-      <ParticleField count={16} />
+      <StoryBackground />
 
       <div ref={textRef} className="section-content relative z-10 mb-10 sm:mb-16 text-center max-w-2xl">
         <span className="text-[10px] sm:text-xs font-medium uppercase tracking-wider sm:tracking-widest2 text-emerald-regal">

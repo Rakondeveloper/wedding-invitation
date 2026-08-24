@@ -5,7 +5,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import RevealText from "./RevealText";
 import AddToCalendar from "./AddToCalendar";
-import AnimatedBgPattern from "./AnimatedBgPattern";
+import InvitationBackground from "./backgrounds/InvitationBackground";
 import { useLanguage } from "../context/LanguageContext";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -82,7 +82,6 @@ export default function WeddingInfo() {
       icon: (
         <svg className="h-6 w-6 text-gold-bright" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-          <circle cx="12" cy="10" r="3" />
         </svg>
       ),
     },
@@ -94,7 +93,7 @@ export default function WeddingInfo() {
       id="details"
       className="full-width-section relative flex min-h-0 w-full flex-col items-center justify-center gap-6 sm:gap-10 overflow-hidden bg-[#E4D7BD] px-4 sm:px-6 py-10 sm:py-16 md:py-20"
     >
-      <AnimatedBgPattern variant="sand" showStarMandala={true} showLatticeMesh={true} />
+      <InvitationBackground />
 
       {/* Section Header */}
       <div className="section-content relative z-10 text-center max-w-xl">

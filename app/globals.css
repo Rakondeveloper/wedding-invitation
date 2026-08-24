@@ -315,3 +315,54 @@ nextjs-portal,
   background-size: 32px 32px;
   background-position: 0 0, 16px 16px;
 }
+
+@keyframes swayBreeze {
+  0%, 100% { transform: rotate(0deg) translateY(0px); }
+  50% { transform: rotate(2deg) translateY(-4px); }
+}
+
+@keyframes waveSilk {
+  0% { transform: translateX(0%) scaleY(1); }
+  50% { transform: translateX(-3%) scaleY(1.05); }
+  100% { transform: translateX(0%) scaleY(1); }
+}
+
+@keyframes swingLantern {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@keyframes driftUpward {
+  0% { transform: translateY(0px); opacity: 0; }
+  30% { opacity: 0.7; }
+  80% { opacity: 0.7; }
+  100% { transform: translateY(-80px); opacity: 0; }
+}
+
+@keyframes driftDownward {
+  0% { transform: translateY(0px); opacity: 0; }
+  30% { opacity: 0.6; }
+  80% { opacity: 0.6; }
+  100% { transform: translateY(80px); opacity: 0; }
+}
+
+.animate-sway {
+  animation: swayBreeze 12s ease-in-out infinite;
+}
+
+.animate-wave-silk {
+  animation: waveSilk 18s ease-in-out infinite;
+}
+
+.animate-swing {
+  animation: swingLantern 7s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+.animate-drift-up {
+  animation: driftUpward 10s ease-in-out infinite;
+}
+
+.animate-drift-down {
+  animation: driftDownward 12s ease-in-out infinite;
+}

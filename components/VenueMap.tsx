@@ -3,8 +3,8 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import VenueBackground from "./backgrounds/VenueBackground";
 import RevealText from "./RevealText";
-import AnimatedBgPattern from "./AnimatedBgPattern";
 import { VENUE_DETAILS } from "../lib/eventConfig";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -48,7 +48,7 @@ export default function VenueMap() {
       id="venue"
       className="full-width-section relative flex min-h-0 w-full flex-col items-center justify-center gap-6 sm:gap-10 overflow-hidden bg-[#E8DDCC] px-4 sm:px-6 py-10 sm:py-16 md:py-20"
     >
-      <AnimatedBgPattern variant="sand" showStarMandala={true} showLatticeMesh={true} />
+      <VenueBackground />
 
       <div className="section-content relative z-10 text-center max-w-lg">
         <span className="text-[10px] sm:text-xs font-medium uppercase tracking-wider sm:tracking-widest2 text-emerald-regal">
